@@ -161,6 +161,45 @@ print(a)  #Output: [ 10.          12.91549665  16.68100537  21.5443469   27.8255
 
 ##Topic - 6
 ##########################START: NumPy - Indexing and Slicing
+#slice(start, stop, step)
+a = np.arange(10)
+s = slice(2, 7, 2)
+print(a[s])   #Output: [2  4  6]
 
+a = np.arange(10)
+b = a[2:7:2]
+print(b)   #Output: [2  4  6]
+
+a = np.arange(10)
+print(a[2:])  #Output: [2  3  4  5  6  7  8  9]
+
+a = np.arange(10)
+print(a[2:5])   #Output: [2  3  4]
+
+a = np.array([[1,2,3],[3,4,5],[4,5,6]])
+print(a[1:])  #Output: [[3 4 5] \n  [4 5 6]]
 
 ##########################END: NumPy - Indexing and Slicing
+
+##Topic - 7
+##########################START: NumPy - Advanced Indexing
+#There are two types of advanced indexing − Integer and Boolean.
+
+#Integer Indexing: one element of specified column from each row of ndarray object is selected. Hence, the row index contains all row numbers, and the column index specifies the element to be selected.
+x = np.array([[1, 2], [3, 4], [5, 6]])
+y = x[[0,1,2], [0,1,0]]
+print(y)  #Output: [1  4  5] because The selection includes elements at (0,0), (1,1) and (2,0) from the first array.
+
+#Boolean Indexing: This type of advanced indexing is used when the resultant object is meant to be the result of Boolean operations, such as comparison operators.
+x = np.array([[ 0,  1,  2],[ 3,  4,  5],[ 6,  7,  8],[ 9, 10, 11]])
+print (x[x > 5])  #Output: [ 6  7  8  9 10 11]
+
+##########################END: NumPy - Advanced Indexing
+
+##Topic - 8
+##########################START: NumPy - Broadcasting
+
+
+##########################END: NumPy - Broadcasting
+
+
